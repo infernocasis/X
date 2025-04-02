@@ -14,7 +14,8 @@ development:
   password: 09042004mM
 
 test:
-  <<: *default
+  <<: *defaultrails s
+  
   database: x_test  # Измените X_test на x_test
 
 production:
