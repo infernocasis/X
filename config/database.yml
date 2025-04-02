@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: infernocasis
+  password: 09042004mM
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: x_development
+  username: infernocasis
+  password: 09042004mM
+
+test:
+  <<: *default
+  database: x_test  # Измените X_test на x_test
+
+production:
+  <<: *default
+  database: x_production  # Измените X_production на x_production
